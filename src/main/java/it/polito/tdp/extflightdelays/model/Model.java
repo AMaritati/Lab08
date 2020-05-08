@@ -45,6 +45,18 @@ public class Model {
 		return this.grafo.edgeSet().size();
 	}
 	
+	/**
+	 * metodo per stampare grafo
+	 * @return
+	 */
+	public String stampaGrafo() {
+		String e="";
+		for(DefaultWeightedEdge E :grafo.edgeSet()) {
+			e+=grafo.getEdgeSource(E)+" -> "+grafo.getEdgeTarget(E)+"   : "+grafo.getEdgeWeight(E)+" miglia\n";
+		}
+		return e;
+	}
+	
 	
 	public boolean controllaTxt (String p) {
 		char c;

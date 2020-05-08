@@ -47,7 +47,7 @@ public class FXMLController {
     	
     	txtResult.setText("Il grafo presenta "+model.nVertici()+" vertici\n");
     	txtResult.appendText("Il grafo presenta " +model.nArchi()+ " archi\n");
-    	
+    	txtResult.appendText(model.stampaGrafo());
     	
     
     	
