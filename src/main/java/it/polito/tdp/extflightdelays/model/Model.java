@@ -44,4 +44,20 @@ public class Model {
 	public int nArchi() {
 		return this.grafo.edgeSet().size();
 	}
+	
+	
+	public boolean controllaTxt (String p) {
+		char c;
+		boolean result = true;
+		
+		for(int i=0;i<p.length();i++){
+            c = p.charAt(i);
+            if(!((Character.isDigit(c)))){
+                result = false;
+                return result;
+            }
+        }
+        
+		return result;
+	}
 }

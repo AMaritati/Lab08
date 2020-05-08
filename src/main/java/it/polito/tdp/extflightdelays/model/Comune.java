@@ -35,6 +35,12 @@ public class Comune {
 	public void setMedia(double media) {
 		this.media = media;
 	}
+
+	@Override
+	public String toString() {
+		return aPartenza + " - " + aArrivo + " - " + media;
+	}
+	
 	
 	
 

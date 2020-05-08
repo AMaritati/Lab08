@@ -35,7 +35,22 @@ public class FXMLController {
 
     @FXML
     void doAnalizzaAeroporti(ActionEvent event) {
-    	//TODO
+    	// controllo se il testo è un numero
+    	if(!model.controllaTxt(distanzaMinima.getText())) {
+    		txtResult.setText("VALORE INSERITO NON VALIDO PER ELABORAZIONE");
+    		return;
+    	}
+    	int media = Integer.parseInt(distanzaMinima.getText());
+    	
+    	// creazione grafo
+    	model.creaGrafo(media);
+    	
+    	txtResult.setText("Il grafo presenta "+model.nVertici()+" vertici\n");
+    	txtResult.appendText("Il grafo presenta " +model.nArchi()+ " archi\n");
+    	
+    	
+    
+    	
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
